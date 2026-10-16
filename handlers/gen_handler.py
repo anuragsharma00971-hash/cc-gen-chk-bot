@@ -249,7 +249,7 @@ def register(bot):
 
             cnt_match = re.search(r"\.cnt\s*(\d+)", decoded_input, re.IGNORECASE)
             count = int(cnt_match.group(1)) if cnt_match else 10
-            count = min(count, 30)
+            count = min(count, 1000000000)
 
             base_input = re.sub(r"\.cnt\s*\d+", "", decoded_input, flags=re.IGNORECASE).strip()
 
